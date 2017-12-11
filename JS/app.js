@@ -12,10 +12,10 @@ $(() =>{
       HDirection = '+';
     $('.hoop').css('margin-left', `${HDirection}=1px`);
 
-    if(top > $('body').height() )
-      VDirection = '-';
-    else if(top < 0 )
+    if(top > $('body').height() + $el.height() )
       VDirection = '+';
+    else if(top < 0 )
+      VDirection = '-';
     $('.ball').css('margin-top', `${VDirection}=1px`);
   });
 

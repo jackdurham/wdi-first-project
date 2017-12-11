@@ -31,16 +31,23 @@ h1 {
   height: 90px;
   width: 90px;
   align-items: center;
-  margin: 0 auto;
+}
+
+.ballhome {
   position: absolute;
-  bottom: 60px;
-  right: 46%;
+    width: 95px;
+    height: 95px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: 200px 0 0 -50px;
 }
 
 body {
   background-image: url('../images/court.png');
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 footer {
