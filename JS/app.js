@@ -13,11 +13,11 @@ $(() =>{
       HDirection = '+';
     $('.hoop').css('margin-left', `${HDirection}=1px`);
 
-
-    $('.ball').css('margin-top','-=1px');
   });
 
+  $('button').click(function() {
+    $('.ball').animate({top: '160px'});
 
-
+  });
 
 });

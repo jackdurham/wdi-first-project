@@ -31,6 +31,9 @@ h1 {
   height: 90px;
   width: 90px;
   align-items: center;
+  position: absolute;
+  margin-left: 46%;
+  top: 560px;
 }
 
 .ballhome {
