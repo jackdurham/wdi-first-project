@@ -1,3 +1,104 @@
+header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: bold;
+  color: white;
+  font-size: 50px;
+  text-shadow:
+    1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.hoop {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.hoop img {
+  height: 140px;
+  width: 140px;
+}
+
+.ball {
+  display: flex;
+  justify-content: center;
+  height: 90px;
+  width: 90px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.ball img {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 525px;
+}
+
 body {
-  background-color: red;
+  background-image: url('../images/court.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+h2 {
+  font-weight: bold;
+  color: black;
+  font-size: 30px;
+  text-shadow:
+    1px 1px 0 white,
+    1px 1px 0 white,
+    1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+button {
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: black;
+  width: 200px;
+  height: 50px;
+  font-size: 36px;
+  font-family: impact;
+  color: white;
+  margin-top: 70px
+}
+
+.level p {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow:
+    1px 1px 0 white,
+    1px 1px 0 white,
+    1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.lives p {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow:
+    1px 1px 0 white,
+    1px 1px 0 white,
+    1px 1px 0 white,
+    1px 1px 0 white;
 }
