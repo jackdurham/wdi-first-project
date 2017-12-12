@@ -37,11 +37,18 @@ $(() =>{
     if (condition1 && condition2 && condition3 && condition4){
       console.log('score');
     } else {
-      console.log('nope');
+      console.log('miss');
     }
+    resetAnimation();
   }
 
-
+  function resetAnimation(){
+    $('.ball').animate({
+      top: '160px'
+    }, 'slow', function () {
+      $(this).removeAttr('style');
+    });
+  }
 
 
 });
