@@ -15,16 +15,14 @@ $(() =>{
     else if(hoop < 0 )
       HDirection = '+';
     $('.hoop').css('margin-left', `${HDirection}=1px`);
-    checkCollision();
   });
 
   $('button').click(function() {
-    $('.ball').animate({top: '160px'}, function(){
-      console.log('done!');
-    });
-
+    $('.ball').animate({top: '160px'}, checkCollision);
   });
+
   function checkCollision(){
+
     $hoopOffset = $hoop.offset();
     $ballOffset = $ball.offset();
 
