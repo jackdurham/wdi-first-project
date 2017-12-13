@@ -81,11 +81,11 @@ button {
   font-size: 36px;
   font-family: impact;
   color: white;
-  margin-top: 70px
+  margin-top: 130px
 }
 
 .level p {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
   text-shadow:
     1px 1px 0 white,
@@ -95,7 +95,7 @@ button {
 }
 
 .lives p {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
   text-shadow:
     1px 1px 0 white,

@@ -3,6 +3,11 @@ $(() =>{
   const $ball =  $('.ball');
   let $hoopOffset = null;
   let $ballOffset = null;
+  let $condition1 = null;
+  let $condition2 = null;
+  let $condition3 = null;
+  let $condition4 = null;
+  let lose = 3;
 
   let HDirection = '+';
 
@@ -14,7 +19,7 @@ $(() =>{
       HDirection = '-';
     else if(hoop < 0 )
       HDirection = '+';
-    $('.hoop').css('margin-left', `${HDirection}=1px`);
+    $('.hoop').css('margin-left', `${HDirection}=3px`);
   });
 
   $('button').click(function() {
@@ -26,21 +31,37 @@ $(() =>{
     $hoopOffset = $hoop.offset();
     $ballOffset = $ball.offset();
 
-    const condition1 = ($ballOffset.left < $hoopOffset.left + $hoop.width() );
+    $condition1 = ($ballOffset.left < $hoopOffset.left + $hoop.width() );
 
-    const condition2 = ($ballOffset.left + $ball.width() > $hoopOffset.left);
+    $condition2 = ($ballOffset.left + $ball.width() > $hoopOffset.left);
 
-    const condition3 = ($ballOffset.top < $hoopOffset.top + $hoop.height() );
+    $condition3 = ($ballOffset.top < $hoopOffset.top + $hoop.height() );
 
-    const condition4 = ($ball.height() + $ballOffset.top > $hoopOffset.top);
+    $condition4 = ($ball.height() + $ballOffset.top > $hoopOffset.top);
 
-    if (condition1 && condition2 && condition3 && condition4){
+    if ($condition1 && $condition2 && $condition3 && $condition4){
       console.log('score');
+      alert('You scored! Next level.');
     } else {
       console.log('miss');
+      loseLife();
+      alert('You missed, lose a life...');
+
     }
+
+
     resetAnimation();
   }
+
+
+  function loseLife() {
+    console.log('inside lose life');
+    console.log($condition1, $condition2, $condition3, $condition4);
+    console.log(lose);
+    lose--;
+    $('.lose').html(`${lose}`);
+  }
+
 
   function resetAnimation(){
     $('.ball').animate({
@@ -49,6 +70,8 @@ $(() =>{
       $(this).removeAttr('style');
     });
   }
+
+
 
 
 });
