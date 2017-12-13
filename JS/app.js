@@ -8,6 +8,7 @@ $(() =>{
   let $condition3 = null;
   let $condition4 = null;
   let lose = 3;
+  let $gameOver = $('.gameOver');
 
   let HDirection = '+';
 
@@ -57,7 +58,9 @@ $(() =>{
   function loseLife() {
     lose--;
     $('.lose').html(`${lose}`);
-    // if loseLife
+    if (lose === 0) {
+      $gameOver.show();
+    }
 
     // if score is zero game over and show alert for game over and restart. set lives and level back to 3 + 1
   }
@@ -72,6 +75,6 @@ $(() =>{
   }
 
 
-
+//gameover button on click reset hide level 1 lives 3
 
 });

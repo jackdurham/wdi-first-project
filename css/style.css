@@ -111,6 +111,7 @@ h2 {
   margin: 0 auto;
   border: 2px solid white;
   border-radius: 25px;
+  display: none;
 }
 
 .reset {
@@ -122,7 +123,7 @@ h2 {
   font-size: 36px;
   font-family: impact;
   color: white;
-  margin-left: 50px;
+  margin-left: 325px;
   margin-top: 20px;
 }
 
@@ -135,4 +136,5 @@ h2 {
     1px 1px 0 black,
     1px 1px 0 black,
     1px 1px 0 black;
+    text-align: center;
 }
