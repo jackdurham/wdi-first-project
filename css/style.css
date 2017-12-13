@@ -138,3 +138,26 @@ h2 {
     1px 1px 0 black;
     text-align: center;
 }
+
+.winner {
+  background-color: rgba(178,34,34,0.5);
+  display: flex;
+  justify-content: center;
+  width: 850px;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 25px;
+  display: none;
+}
+
+.wintxt {
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  text-shadow:
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black;
+    text-align: center;
+}

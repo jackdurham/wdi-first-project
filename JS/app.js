@@ -8,8 +8,10 @@ $(() =>{
   let $condition3 = null;
   let $condition4 = null;
   let lose = 3;
+  let win = 1;
   const $gameOver = $('.gameOver');
   const $refresh = $('.reset');
+  const $winner = $('.winner');
 
 
   let HDirection = '+';
@@ -44,6 +46,7 @@ $(() =>{
 
     if ($condition1 && $condition2 && $condition3 && $condition4){
       console.log('score');
+      levelUp();
       alert('You scored! Next level.');
     } else {
       console.log('miss');
@@ -56,6 +59,14 @@ $(() =>{
     resetAnimation();
   }
 
+
+  function levelUp() {
+    win++;
+    $('.win').html(`${win}`);
+    if (win === 4) {
+      $winner.show();
+    }
+  }
 
   function loseLife() {
     lose--;
@@ -74,12 +85,13 @@ $(() =>{
     });
   }
 
+
   function refreshButton(){
     location.reload();
   }
 
   $refresh.on('click', refreshButton);
 
-//gameover button on click reset hide level 1 lives 3
+
 
 });
