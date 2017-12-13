@@ -12,6 +12,7 @@ $(() =>{
   const $gameOver = $('.gameOver');
   const $refresh = $('.reset');
   const $winner = $('.winner');
+  const $enter = $('.starter');
 
 
   let HDirection = '+';
@@ -94,6 +95,8 @@ $(() =>{
 
   $refresh.on('click', refreshButton);
 
-
-
+  function enter() {
+    $enter.hide();
+  }
+  $enter.on('click', enter);
 });

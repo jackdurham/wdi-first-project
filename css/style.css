@@ -163,3 +163,50 @@ h2 {
     1px 1px 0 black;
     text-align: center;
 }
+
+.starter {
+  background-color: rgba(178,34,34,0.5);
+  justify-content: center;
+  width: 850px;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 25px;
+  /*display: none;*/
+}
+
+.instructions {
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  text-shadow:
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black;
+    text-align: center;
+}
+
+.enter {
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: black;
+  width: 200px;
+  height: 50px;
+  font-size: 36px;
+  font-family: impact;
+  color: white;
+  margin-left: 325px;
+  margin-top: 20px;
+}
+
+.missAlert {
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  text-shadow:
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black;
+    text-align: center;
+}
