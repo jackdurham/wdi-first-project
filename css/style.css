@@ -48,9 +48,8 @@ h1 {
 
 body {
   background-image: url('../images/court.png');
-  background-repeat: no-repeat;
+  background-repeat: inherit;
   background-size: cover;
-
 }
 
 footer {
@@ -72,7 +71,7 @@ h2 {
     1px 1px 0 white;
 }
 
-button {
+.shoot {
   border: 2px solid black;
   border-radius: 25px;
   background-color: black;
@@ -102,4 +101,38 @@ button {
     1px 1px 0 white,
     1px 1px 0 white,
     1px 1px 0 white;
+}
+
+.gameOver {
+  background-color: rgba(178,34,34,0.5);
+  display: flex;
+  justify-content: center;
+  width: 850px;
+  margin: 0 auto;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+.reset {
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: black;
+  width: 200px;
+  height: 50px;
+  font-size: 36px;
+  font-family: impact;
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.losstxt {
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  text-shadow:
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black;
 }

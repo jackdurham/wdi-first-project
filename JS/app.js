@@ -22,7 +22,7 @@ $(() =>{
     $('.hoop').css('margin-left', `${HDirection}=3px`);
   });
 
-  $('button').click(function() {
+  $('.shoot').click(function() {
     $('.ball').animate({top: '160px'}, checkCollision);
   });
 
@@ -55,11 +55,11 @@ $(() =>{
 
 
   function loseLife() {
-    console.log('inside lose life');
-    console.log($condition1, $condition2, $condition3, $condition4);
-    console.log(lose);
     lose--;
     $('.lose').html(`${lose}`);
+    // if loseLife
+
+    // if score is zero game over and show alert for game over and restart. set lives and level back to 3 + 1
   }
 
 
