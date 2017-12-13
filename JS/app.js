@@ -7,7 +7,7 @@ $(() =>{
   let $condition2 = null;
   let $condition3 = null;
   let $condition4 = null;
-  let lose = 3;
+  let lose = 5;
   let win = 1;
   const $gameOver = $('.gameOver');
   const $refresh = $('.reset');
@@ -18,13 +18,13 @@ $(() =>{
 
   setInterval(function(){
     const hoop = parseInt($hoop.css('margin-left'));
-
+    const speed = 3;
     //moving from left to right of the screen
     if(hoop > $('body').width() - $hoop.width() )
       HDirection = '-';
     else if(hoop < 0 )
       HDirection = '+';
-    $('.hoop').css('margin-left', `${HDirection}=3px`);
+    $('.hoop').css('margin-left', `${HDirection}=${speed * win}px`);
   });
 
   $('.shoot').click(function() {
@@ -62,7 +62,9 @@ $(() =>{
 
   function levelUp() {
     win++;
-    $('.win').html(`${win}`);
+    if (win < 4) {
+      $('.win').html(`${win}`);
+    }
     if (win === 4) {
       $winner.show();
     }

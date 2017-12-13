@@ -6,6 +6,7 @@ header {
 
 h1 {
   font-weight: bold;
+  font-family: copperplate;
   color: white;
   font-size: 50px;
   text-shadow:
@@ -62,6 +63,7 @@ footer {
 
 h2 {
   font-weight: bold;
+  font-family: copperplate;
   color: black;
   font-size: 30px;
   text-shadow:
