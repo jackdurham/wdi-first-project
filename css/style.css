@@ -224,3 +224,16 @@ h2 {
     text-align: center;
     display: none;
 }
+
+@media only screen and (max-width: 700px) {
+  .starter {
+    position: absolute;
+    left: 62px;
+    top: 180px;
+  }
+
+  .body {
+    background-repeat: no-repeat;
+    background-size: initial;
+  }
+}
