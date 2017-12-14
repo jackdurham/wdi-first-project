@@ -15,6 +15,8 @@ $(() =>{
   const $enter = $('.starter');
   const $missAlert = $('.missAlert');
   const $winAlert = $('.winAlert');
+  const $audioScore = $('.scoreSound').get(0);
+  const $audioMiss = $('.missSound').get(0);
 
 
   let HDirection = '+';
@@ -51,10 +53,12 @@ $(() =>{
 
       levelUp();
       winPopUp();
+      playWinSound();
     } else {
 
       loseLife();
       missPopUp();
+      playMissSound();
 
     }
 
@@ -66,6 +70,11 @@ $(() =>{
       $winAlert.hide();
     }, 2000);
 
+    function playWinSound() {
+      $audioScore.src = './sounds/score.wav';
+      $audioScore.play();
+    }
+
     function missPopUp(){
       $missAlert.show();
     }
@@ -73,6 +82,11 @@ $(() =>{
     setTimeout(function(){
       $missAlert.hide();
     }, 2000);
+
+    function playMissSound() {
+      $audioMiss.src = './sounds/miss.wav';
+      $audioMiss.play();
+    }
 
     resetAnimation();
   }
