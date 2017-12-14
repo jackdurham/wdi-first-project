@@ -20,7 +20,7 @@ $(() =>{
 
 
   let HDirection = '+';
-
+  //sets speed of hoop
   setInterval(function(){
     const hoop = parseInt($hoop.css('margin-left'));
     const speed = 3;
@@ -35,7 +35,7 @@ $(() =>{
   $('.shoot').click(function() {
     $('.ball').animate({top: '160px'}, checkCollision);
   });
-
+  //Checks for the collision between the ball and hoop
   function checkCollision(){
 
     $hoopOffset = $hoop.offset();
@@ -61,28 +61,28 @@ $(() =>{
       playMissSound();
 
     }
-
+    //shows the pop up when a score is registered
     function winPopUp() {
       $winAlert.show();
     }
-
+    // hides the pop up after 2 seconds
     setTimeout(function(){
       $winAlert.hide();
     }, 2000);
-
+    // plays sound when score is registered
     function playWinSound() {
       $audioScore.src = './sounds/score.wav';
       $audioScore.play();
     }
-
+    //shows the pop up when a miss is registered
     function missPopUp(){
       $missAlert.show();
     }
-
+    //hides the pop up after 2 seconds
     setTimeout(function(){
       $missAlert.hide();
     }, 2000);
-
+    //plays sound when miss is registered
     function playMissSound() {
       $audioMiss.src = './sounds/miss.wav';
       $audioMiss.play();
@@ -91,7 +91,7 @@ $(() =>{
     resetAnimation();
   }
 
-
+  //increases the level number to 3 and speeds up the hoop
   function levelUp() {
     win++;
     if (win < 4) {
@@ -101,7 +101,7 @@ $(() =>{
       $winner.show();
     }
   }
-
+  //decrease the live number
   function loseLife() {
     lose--;
     $('.lose').html(`${lose}`);
@@ -110,7 +110,7 @@ $(() =>{
     }
   }
 
-
+  //resets the ball to the bottom of the screen
   function resetAnimation(){
     $('.ball').animate({
       top: '160px'
@@ -119,7 +119,7 @@ $(() =>{
     });
   }
 
-
+  //the function that refreshes the page when clicked
   function refreshButton(){
     location.reload();
   }
