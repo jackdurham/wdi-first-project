@@ -171,7 +171,7 @@ h2 {
   margin: 0 auto;
   border: 2px solid white;
   border-radius: 25px;
-  /*display: none;*/
+
 }
 
 .instructions {
@@ -201,12 +201,26 @@ h2 {
 
 .missAlert {
   font-weight: bold;
-  color: white;
-  font-size: 30px;
+  color: rgb(178,34,34);
+  font-size: 80px;
   text-shadow:
     1px 1px 0 black,
     1px 1px 0 black,
     1px 1px 0 black,
     1px 1px 0 black;
     text-align: center;
+    display: none;
+}
+
+.winAlert {
+  font-weight: bold;
+  color: rgb(178,34,34);
+  font-size: 80px;
+  text-shadow:
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black,
+    1px 1px 0 black;
+    text-align: center;
+    display: none;
 }

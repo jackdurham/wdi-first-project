@@ -13,6 +13,8 @@ $(() =>{
   const $refresh = $('.reset');
   const $winner = $('.winner');
   const $enter = $('.starter');
+  const $missAlert = $('.missAlert');
+  const $winAlert = $('.winAlert');
 
 
   let HDirection = '+';
@@ -46,16 +48,31 @@ $(() =>{
     $condition4 = ($ball.height() + $ballOffset.top > $hoopOffset.top);
 
     if ($condition1 && $condition2 && $condition3 && $condition4){
-      console.log('score');
+
       levelUp();
-      alert('You scored! Next level.');
+      winPopUp();
     } else {
-      console.log('miss');
+
       loseLife();
-      alert('You missed, lose a life...');
+      missPopUp();
 
     }
 
+    function winPopUp() {
+      $winAlert.show();
+    }
+
+    setTimeout(function(){
+      $winAlert.hide();
+    }, 2000);
+
+    function missPopUp(){
+      $missAlert.show();
+    }
+
+    setTimeout(function(){
+      $missAlert.hide();
+    }, 2000);
 
     resetAnimation();
   }
@@ -99,4 +116,6 @@ $(() =>{
     $enter.hide();
   }
   $enter.on('click', enter);
+
+
 });
