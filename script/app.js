@@ -17,9 +17,9 @@ $(() =>{
   const $winAlert = $('.winAlert');
   const $audioScore = $('.scoreSound').get(0);
   const $audioMiss = $('.missSound').get(0);
-
-
   let HDirection = '+';
+
+  
   //sets speed of hoop
   setInterval(function(){
     const hoop = parseInt($hoop.css('margin-left'));
